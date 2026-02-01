@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anime Ascendants | Official Website</title>
     <meta name="description"
-        content="Official website for Anime Ascendants!">
+        content="Official website for Anime Ascendants – the ultimate Anime Tower Defense experience on Roblox. Collect units, level up, and defend!">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -61,7 +61,7 @@
                     </div>
 
                     <div class="updates-grid">
-                        <div class="update-card" id="update-1">
+                        <div class="update-card" id="update-1" onclick="openUpdate('update-1')">
                             <div class="update-banner">
                                 <img src="images/update1image.png" alt="Update 1 Banner">
                                 <div class="update-badge">Update 1</div>
@@ -70,9 +70,9 @@
                                 <h3>Bloody Winter</h3>
                                 <p>Major balance adjustments and new units. Discover what awaits in our first major
                                     update.</p>
-                                <button class="btn btn-open" onclick="openUpdate('update-1')">
+                                <div class="btn btn-open">
                                     Open Update <i data-lucide="chevron-right"></i>
-                                </button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -112,7 +112,8 @@
                                             <span>Capsule Secret</span>
                                         </div>
                                     </div>
-                                    <div class="unit-item">
+                                    <div class="unit-item" onclick="navigateTo('assassin-guide')"
+                                        style="cursor: pointer;">
                                         <img src="images/Update1/Units/Assassin.jpg" alt="Assassin">
                                         <div class="unit-text">
                                             <h4>Assassin</h4>
@@ -150,6 +151,7 @@
                                         class="content-thumb">
                                     <div class="content-text">
                                         <h3>Winter Village Story Mode</h3>
+
                                     </div>
                                 </div>
                             </div>
@@ -202,6 +204,121 @@
                                     <li>UPPERMOON Title (Ascendant Trial)</li>
                                 </ul>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="assassin-guide" class="page-section">
+                <div class="container">
+                    <button class="btn-back" onclick="navigateTo('update-details')">
+                        <i data-lucide="arrow-left"></i> Back to Update 1
+                    </button>
+
+                    <div class="guide-header">
+                        <h1>Secret Unit: <span>Kang Taeshik</span></h1>
+                        <p class="guide-quote">“Whoever fights monsters should see to it that in the process he does not
+                            become a monster.”</p>
+                    </div>
+
+                    <div class="guide-content">
+                        <div class="guide-steps">
+                            <div class="step">
+                                <span class="step-num">01</span>
+                                <div class="step-text">
+                                    <h3>The Red Gate Ritual</h3>
+                                    <p>To begin your journey, you must prove you are not reliant on power alone. Beat
+                                        the <strong>Red Gate (Solo Leveling Event)</strong> while having at least one
+                                        <strong>Rare Unit</strong> equipped in your team.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="step">
+                                <span class="step-num">02</span>
+                                <div class="step-text">
+                                    <h3>Seek the Fire Hunter</h3>
+                                    <p>Locate <strong>Choi Jong-In (Fire Hunter)</strong> in the lobby. His reaction
+                                        will depend on your achievements.</p>
+                                    <div class="npc-chat">
+                                        <div class="npc-img">
+                                            <img src="images/Update1/Secret/FireHunterNpcImage.png" alt="Choi Jong-In">
+                                        </div>
+                                        <div class="chat-bubble">
+                                            <span class="char-name">Choi Jong-In</span>
+                                            <p class="locked">“My guild requires elite firepower. I have no interest in
+                                                someone who doesn't understand the value of a strong team. Stop wasting
+                                                my time.”</p>
+                                            <p class="unlocked">“You actually cleared the raid... with that thing on
+                                                your team? Hmph. Reckless. I hear a 'Very Important Person' is hiding
+                                                within these walls. Speak the code obtained from the story maps.”</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="step">
+                                <span class="step-num">03</span>
+                                <div class="step-text">
+                                    <h3>The Hidden Sequence</h3>
+                                    <p>Enter the ancient code into the <strong>Codes UI</strong> to reveal the passage.
+                                        The way will open
+                                        behind the Crafting NPC.</p>
+                                    <div class="code-display">
+                                        <span class="code-label">SECRET CODE:</span>
+                                        <span class="code-value">9261</span>
+                                    </div>
+                                    <div class="location-img">
+                                        <img src="images/Update1/Secret/HisokaCrafting.png" alt="Crafting NPC Wall">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="step">
+                                <span class="step-num">04</span>
+                                <div class="step-text">
+                                    <h3>Meeting the Assassin</h3>
+                                    <p>Find Kang Taeshik hidden in the gap. He'll challenge your resolve with a set of
+                                        trials.</p>
+                                    <div class="assassin-meeting">
+                                        <img src="images/Update1/Secret/InsideAssassin.png" alt="Kang Taeshik">
+                                        <div class="chat-bubble">
+                                            <span class="char-name">Kang Taeshik</span>
+                                            <p>“Join you? I don't work with amateurs. However, I am getting bored of the
+                                                usual prey. Complete these tasks, and I might consider lowering myself
+                                                to help.”</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="guide-card questline">
+                            <h2><i data-lucide="scroll"></i> The Assassin's Trials</h2>
+                            <ul class="quest-list">
+                                <li>
+                                    <span class="quest-item">Beat the Red Gate Stage</span>
+                                    <span class="quest-count">0 / 5</span>
+                                </li>
+                                <li>
+                                    <span class="quest-item">Win Any Stage</span>
+                                    <span class="quest-count">0 / 20</span>
+                                </li>
+                                <li>
+                                    <span class="quest-item">Deal Total Damage</span>
+                                    <span class="quest-count">0 / 20,000,000</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="final-reward">
+                            <h3>Claim Your Ally</h3>
+                            <p>Upon completing every trial, speak to Kang Taeshik once more. He will join your ranks for
+                                a fee of <strong>1,000 Gems</strong>.</p>
+                        </div>
+
+                        <div class="guide-footer">
+                            <p>Document written by Konami for Anime Ascendants</p>
                         </div>
                     </div>
                 </div>
